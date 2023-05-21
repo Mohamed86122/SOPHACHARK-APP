@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#2980b9;
-   --orange:#f39c12;
+   --main-color:#00bf63;
+   --orange:#2980b9;
    --red:#e74c3c;
    --black:#333;
    --white:#fff;
@@ -83,7 +83,7 @@ section{
 }
 
 .btn{
-   background-color: var(--main-color);
+   background-color: #00bf63;
 }
 
 .option-btn{
@@ -183,7 +183,7 @@ section{
 }
 
 .header .flex .navbar a:hover{
-   color:var(--main-color);
+   color:#00bf63;
    text-decoration: underline;
 }
 
@@ -196,7 +196,7 @@ section{
 }
 
 .header .flex .icons > *:hover{
-   color:var(--main-color);
+   color:#00bf63;
 }
 
 .header .flex .icons a span{
@@ -264,13 +264,13 @@ section{
 
 .home-bg .home .slide .content span{
    font-size: 2rem;
-   color:var(--white);
+   color:#00bf63;
 }
 
 .home-bg .home .slide .content h3{
    margin-top: 1rem;
    font-size: 4rem;
-   color:var(--white);
+   color:black;
    text-transform: uppercase;
 }
 
@@ -294,7 +294,7 @@ section{
 }
 
 .category .slide:hover{
-   background-color: var(--black);
+   background-color: #00bf63;
 }
 
 .category .slide:hover img{
@@ -314,7 +314,7 @@ section{
 }
 
 .category .slide h3{
-   font-size: 2rem;
+   font-size: 1rem;
    color:var(--black);
    user-select: none;
 }

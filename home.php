@@ -21,7 +21,7 @@ include 'components/wishlist_cart.php';
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>home</title>
-
+   <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    
    <!-- font awesome cdn link  -->
@@ -45,7 +45,7 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo1.png" alt="">
          </div>
          <div class="content">
             <span>SOPHA CHARK</span>
@@ -56,7 +56,7 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo1.png" alt="">
          </div>
          <div class="content">
             <span>La société pharmaceutique du Maghreb Ach-charki (SOPHACHARK S.A) est spécialisée dans la commercialisation de produits pharmaceutiques auprès des pharmacies agréées par le ministère de la Santé. </span>
@@ -67,7 +67,7 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo1.png" alt="">
          </div>
          <div class="content">
             <span>SOPHACHARK est une société anonyme créée en 1984 avec un capital de 3 000 000 de dirhams. Elle est située dans la zone industrielle de la route de MAGHNIYA à OUJDA et emploie jusqu'à 50 personnes.</span>
@@ -88,50 +88,50 @@ include 'components/wishlist_cart.php';
 
 <section class="category">
 
-   <h1 class="heading">shop by category</h1>
+   <h1 class="heading">Les médicaments</h1>
 
    <div class="swiper category-slider">
 
    <div class="swiper-wrapper">
 
    <a href="category.php?category=laptop" class="swiper-slide slide">
-      <img src="images/icon-1.png" alt="">
-      <h3>laptop</h3>
+      <img src="images/anes.png" alt="">
+      <h3>ANESTHÉSIQUES</h3>
    </a>
 
    <a href="category.php?category=tv" class="swiper-slide slide">
-      <img src="images/icon-2.png" alt="">
-      <h3>tv</h3>
+      <img src="images/doly.jpeg" alt="">
+      <h3>ANALGÉSIQUES</h3>
    </a>
 
    <a href="category.php?category=camera" class="swiper-slide slide">
-      <img src="images/icon-3.png" alt="">
-      <h3>camera</h3>
+      <img src="images/antidote.png" alt="">
+      <h3>ANTIDOTES</h3>
    </a>
 
    <a href="category.php?category=mouse" class="swiper-slide slide">
-      <img src="images/icon-4.png" alt="">
-      <h3>mouse</h3>
+      <img src="images/antimigraineux.png" alt="">
+      <h3>ANTIMIGRAINEUX</h3>
    </a>
 
    <a href="category.php?category=fridge" class="swiper-slide slide">
-      <img src="images/icon-5.png" alt="">
-      <h3>fridge</h3>
+      <img src="images/arton.jpg" alt="">
+      <h3>ANTICONVULSIVANTS</h3>
    </a>
 
    <a href="category.php?category=washing" class="swiper-slide slide">
-      <img src="images/icon-6.png" alt="">
-      <h3>washing machine</h3>
+      <img src="images/anaphylaxie.jpg" alt="">
+      <h3>ANTI-ANAPHYLACTIQUES</h3>
    </a>
 
    <a href="category.php?category=smartphone" class="swiper-slide slide">
-      <img src="images/icon-7.png" alt="">
-      <h3>smartphone</h3>
+      <img src="images/1372085.jpg" alt="">
+      <h3>ANTIPARKINSONIENS</h3>
    </a>
 
    <a href="category.php?category=watch" class="swiper-slide slide">
-      <img src="images/icon-8.png" alt="">
-      <h3>watch</h3>
+      <img src="images/Nurodol.png" alt="">
+      <h3>ANTI-INFLAMMATOIRES</h3>
    </a>
 
    </div>

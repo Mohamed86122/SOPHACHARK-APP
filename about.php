@@ -38,13 +38,13 @@ if(isset($_SESSION['user_id'])){
    <div class="row">
 
       <div class="image">
-         <img src="images/about-img.svg" alt="">
+         <img src="images/logo1.png" alt="">
       </div>
 
       <div class="content">
-         <h3>why choose us?</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam veritatis minus et similique doloribus? Harum molestias tenetur eaque illum quas? Obcaecati nulla in itaque modi magnam ipsa molestiae ullam consequuntur.</p>
-         <a href="contact.php" class="btn">contact us</a>
+         <h3>SOPHACHARK</h3>
+         <p>La société pharmaceutique du Maghreb Ach-charki (SOPHACHARK S.A) est spécialisée dans la commercialisation de produits pharmaceutiques auprès des pharmacies agréées par le ministère de la Santé.</p>
+         <a href="contact.php" class="btn">contactez nous !</a>
       </div>
 
    </div>
@@ -53,7 +53,7 @@ if(isset($_SESSION['user_id'])){
 
 <section class="reviews">
    
-   <h1 class="heading">client's reviews</h1>
+   <h1 class="heading">Feedbacks des clients</h1>
 
    <div class="swiper reviews-slider">
 
