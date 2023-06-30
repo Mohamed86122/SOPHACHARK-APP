@@ -18,12 +18,12 @@
       <a href="../admin/dashboard.php" class="logo">Administrateur<span>interface</span></a>
 
       <nav class="navbar">
-         <a href="../admin/dashboard.php">Acceuil</a>
-         <a href="../admin/products.php">Produits</a>
-         <a href="../admin/placed_orders.php">Commandes</a>
-         <a href="../admin/admin_accounts.php">Administrateur</a>
-         <a href="../admin/users_accounts.php">Utilisateur</a>
-         <a href="../admin/messages.php">Messages</a>
+         <a href="../admin/dashboard.php" style="text-decoration:none;">Acceuil</a>
+         <a href="../admin/products.php" style="text-decoration:none;">Produits</a>
+         <a href="../admin/placed_orders.php" style="text-decoration:none;">Commandes</a>
+         <a href="../admin/admin_accounts.php" style="text-decoration:none;">Administrateur</a>
+         <a href="../admin/users_accounts.php"style="text-decoration:none;">Utilisateur</a>
+         <a href="../admin/messages.php"style="text-decoration:none;">Messages</a>
       </nav>
 
       <div class="icons">

@@ -33,11 +33,11 @@ if(isset($_GET['delete_all'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>wishlist</title>
+   <title>Liste des souhaits</title>
    
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="shortcut icon" href="images/Hanover.png" type="image/x-icon">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
@@ -48,7 +48,7 @@ if(isset($_GET['delete_all'])){
 
 <section class="products">
 
-   <h3 class="heading">your wishlist</h3>
+   <h3 class="heading">Liste des souhaits</h3>
 
    <div class="box-container">
 
@@ -70,24 +70,24 @@ if(isset($_GET['delete_all'])){
       <img src="uploaded_img/<?= $fetch_wishlist['image']; ?>" alt="">
       <div class="name"><?= $fetch_wishlist['name']; ?></div>
       <div class="flex">
-         <div class="price">$<?= $fetch_wishlist['price']; ?>/-</div>
+         <div class="price"><?= $fetch_wishlist['price']; ?> MAD</div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
-      <input type="submit" value="delete item" onclick="return confirm('delete this from wishlist?');" class="delete-btn" name="delete">
+      <input type="submit" value="Ajouter au panier" class="btn" name="add_to_cart">
+      <input type="submit" value="Supprimer article" onclick="return confirm('Supprimer le médicament de votre liste de souhait ?');" class="delete-btn" name="delete">
    </form>
    <?php
       }
    }else{
-      echo '<p class="empty">your wishlist is empty</p>';
+      echo '<p class="empty">Votre liste des souhaits est vide !</p>';
    }
    ?>
    </div>
 
    <div class="wishlist-total">
-      <p>grand total : <span>$<?= $grand_total; ?>/-</span></p>
-      <a href="shop.php" class="option-btn">continue shopping</a>
-      <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from wishlist?');">delete all item</a>
+      <p>Total : <span><?= $grand_total; ?> MAD</span></p>
+      <a href="shop.php" class="option-btn">Vers Liste des médicaments</a>
+      <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from wishlist?');">Supprimer tout articles</a>
    </div>
 
 </section>

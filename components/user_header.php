@@ -49,13 +49,13 @@
             if($select_profile->rowCount() > 0){
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
          ?>
-         <p><?= $fetch_profile["name"]; ?></p>
-         <a href="update_user.php" class="btn">update profile</a>
+         <p style="font-size: 30px;"><?= $fetch_profile["name"]; ?></p>
+         <a href="update_user.php" class="btn">Modifier le profile</a>
          <div class="flex-btn">
-            <a href="user_register.php" class="option-btn">register</a>
-            <a href="user_login.php" class="option-btn">login</a>
+            <a href="user_register.php" class="option-btn">Inscription</a>
+            <a href="user_login.php" class="option-btn">Login</a>
          </div>
-         <a href="components/user_logout.php" class="delete-btn" onclick="return confirm('logout from the website?');">logout</a> 
+         <a href="components/user_logout.php" class="delete-btn" onclick="return confirm('Vous êtes sûr de se déconnecter du site web ?');">Se déconnecter</a> 
          <?php
             }else{
          ?>

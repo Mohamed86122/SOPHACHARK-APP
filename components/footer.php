@@ -3,7 +3,7 @@
    <section class="grid">
 
       <div class="box">
-         <h3>quick links</h3>
+         <h3>Liens</h3>
          <a href="home.php"> <i class="fas fa-angle-right"></i> Acceuil</a>
          <a href="about.php"> <i class="fas fa-angle-right"></i> A propos de</a>
          <a href="shop.php"> <i class="fas fa-angle-right"></i> Voir les médicaments</a>
@@ -11,9 +11,9 @@
       </div>
 
       <div class="box">
-         <h3>extra links</h3>
+         <h3>Liens supplémentaire</h3>
          <a href="user_login.php"> <i class="fas fa-angle-right"></i> Se connecter</a>
-         <a href="user_register.php"> <i class="fas fa-angle-right"></i> S'inscire</a>
+         <a href="user_register.php"> <i class="fas fa-angle-right"></i> S'inscrire</a>
          <a href="cart.php"> <i class="fas fa-angle-right"></i> Panier</a>
          <a href="orders.php"> <i class="fas fa-angle-right"></i> Commande</a>
       </div>

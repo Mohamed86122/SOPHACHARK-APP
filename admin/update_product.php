@@ -94,8 +94,8 @@ if(isset($_POST['update'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>update product</title>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="shortcut icon" href="../images/Hanover.png" type="image/x-icon">
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -105,7 +105,7 @@ if(isset($_POST['update'])){
 
 <section class="update-product">
 
-   <h1 class="heading">update product</h1>
+   <h1 class="heading">Modifier médicament</h1>
 
    <?php
       $update_id = $_GET['update'];
@@ -129,28 +129,28 @@ if(isset($_POST['update'])){
             <img src="../uploaded_img/<?= $fetch_products['image_03']; ?>" alt="">
          </div>
       </div>
-      <span>update name</span>
+      <span>Libélle médicamant</span>
       <input type="text" name="name" required class="box" maxlength="100" placeholder="enter product name" value="<?= $fetch_products['name']; ?>">
-      <span>update price</span>
+      <span>prix</span>
       <input type="number" name="price" required class="box" min="0" max="9999999999" placeholder="enter product price" onkeypress="if(this.value.length == 10) return false;" value="<?= $fetch_products['price']; ?>">
-      <span>update details</span>
+      <span>détails</span>
       <textarea name="details" class="box" required cols="30" rows="10"><?= $fetch_products['details']; ?></textarea>
-      <span>update image 01</span>
+      <span>image 01</span>
       <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
-      <span>update image 02</span>
+      <span>image 02</span>
       <input type="file" name="image_02" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
-      <span>update image 03</span>
+      <span> image 03</span>
       <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
       <div class="flex-btn">
-         <input type="submit" name="update" class="btn" value="update">
-         <a href="products.php" class="option-btn">go back</a>
+         <input type="submit" name="update" class="btn" value="Modifier">
+         <a href="products.php" class="option-btn">Retour</a>
       </div>
    </form>
    
    <?php
          }
       }else{
-         echo '<p class="empty">no product found!</p>';
+         echo '<p class="empty">Pas de produit disponible </p>';
       }
    ?>
 

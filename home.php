@@ -20,12 +20,12 @@ include 'components/wishlist_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
-   <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
+   <title>Acceuil</title>
+   <link rel="shortcut icon" href="images/Hanover.png" type="image/x-icon">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
@@ -45,7 +45,7 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/logo1.png" alt="">
+            <img src="images/Hanover.png" alt="">
          </div>
          <div class="content">
             <span>SOPHA CHARK</span>
@@ -56,7 +56,7 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/logo1.png" alt="">
+            <img src="images/Hanover.png" alt="">
          </div>
          <div class="content">
             <span>La société pharmaceutique du Maghreb Ach-charki (SOPHACHARK S.A) est spécialisée dans la commercialisation de produits pharmaceutiques auprès des pharmacies agréées par le ministère de la Santé. </span>
@@ -67,7 +67,7 @@ include 'components/wishlist_cart.php';
 
       <div class="swiper-slide slide">
          <div class="image">
-            <img src="images/logo1.png" alt="">
+            <img src="images/Hanover.png" alt="">
          </div>
          <div class="content">
             <span>SOPHACHARK est une société anonyme créée en 1984 avec un capital de 3 000 000 de dirhams. Elle est située dans la zone industrielle de la route de MAGHNIYA à OUJDA et emploie jusqu'à 50 personnes.</span>
@@ -86,7 +86,7 @@ include 'components/wishlist_cart.php';
 
 </div>
 
-<section class="category">
+<!-- <section class="category">
 
    <h1 class="heading">Les médicaments</h1>
 
@@ -140,11 +140,11 @@ include 'components/wishlist_cart.php';
 
    </div>
 
-</section>
+</section> -->
 
 <section class="home-products">
 
-   <h1 class="heading">latest products</h1>
+   <h1 class="heading">Les médicaments disponibles</h1>
 
    <div class="swiper products-slider">
 
@@ -166,15 +166,15 @@ include 'components/wishlist_cart.php';
       <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
-         <div class="price"><span>$</span><?= $fetch_product['price']; ?><span>/-</span></div>
+         <div class="price"><span></span><?= $fetch_product['price']; ?><span> MAD</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
+      <input type="submit" value="Ajouter à la carte " class="btn" name="add_to_cart">
    </form>
    <?php
       }
    }else{
-      echo '<p class="empty">no products added yet!</p>';
+      echo '<p class="empty">Aucun produit ajouté pour le moment !</p>';
    }
    ?>
 

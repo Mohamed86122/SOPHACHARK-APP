@@ -41,7 +41,7 @@ if(isset($_POST['add_product'])){
    $select_products->execute([$name]);
 
    if($select_products->rowCount() > 0){
-      $message[] = 'product name already exist!';
+      $message[] = 'Médicament déjà existant !';
    }else{
 
       $insert_products = $conn->prepare("INSERT INTO `products`(name, details, price, image_01, image_02, image_03) VALUES(?,?,?,?,?,?)");
@@ -54,7 +54,7 @@ if(isset($_POST['add_product'])){
             move_uploaded_file($image_tmp_name_01, $image_folder_01);
             move_uploaded_file($image_tmp_name_02, $image_folder_02);
             move_uploaded_file($image_tmp_name_03, $image_folder_03);
-            $message[] = 'new product added!';
+            $message[] = 'Nouveau médicament ajouté ! ';
          }
 
       }
@@ -84,92 +84,91 @@ if(isset($_GET['delete'])){
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>products</title>
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Médicaments</title>
+      <link rel="shortcut icon" href="../images/Hanover.png" type="image/x-icon">
+      <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <link rel="stylesheet" href="../css/admin_style.css">
 
-   <link rel="stylesheet" href="../css/admin_style.css">
+   </head>
+   <body>
 
-</head>
-<body>
+   <?php include '../components/admin_header.php'; ?>
 
-<?php include '../components/admin_header.php'; ?>
+   <section class="add-products">
 
-<section class="add-products">
+      <h1 class="heading">Ajouter médicament</h1>
 
-   <h1 class="heading">add product</h1>
-
-   <form action="" method="post" enctype="multipart/form-data">
-      <div class="flex">
+      <form action="" method="post" enctype="multipart/form-data">
+         <div class="flex">
+            <div class="inputBox">
+               <span>Nom médicament (Obligatoire)</span>
+               <input type="text" class="box" required maxlength="100" placeholder="Entrer le nom du médicament" name="name">
+            </div>
+            <div class="inputBox">
+               <span>Prix (Obligatoire)</span>
+               <input type="number" min="0" class="box" required max="9999999999" placeholder="Entrer le prix du produit" onkeypress="if(this.value.length == 10) return false;" name="price">
+            </div>
          <div class="inputBox">
-            <span>product name (required)</span>
-            <input type="text" class="box" required maxlength="100" placeholder="enter product name" name="name">
+               <span>image 01 (Obligatoire)</span>
+               <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
          </div>
          <div class="inputBox">
-            <span>product price (required)</span>
-            <input type="number" min="0" class="box" required max="9999999999" placeholder="enter product price" onkeypress="if(this.value.length == 10) return false;" name="price">
+               <span>image 02 (Obligatoire)</span>
+               <input type="file" name="image_02" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
          </div>
-        <div class="inputBox">
-            <span>image 01 (required)</span>
-            <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
-        </div>
-        <div class="inputBox">
-            <span>image 02 (required)</span>
-            <input type="file" name="image_02" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
-        </div>
-        <div class="inputBox">
-            <span>image 03 (required)</span>
-            <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
-        </div>
          <div class="inputBox">
-            <span>product details (required)</span>
-            <textarea name="details" placeholder="enter product details" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+               <span>image 03 (Obligatoire)</span>
+               <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
+         </div>
+            <div class="inputBox">
+               <span>Description médicament (Obligatoire)</span>
+               <textarea name="details" placeholder="Entrer la description du médicament" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+            </div>
+         </div>
+         
+         <input type="submit" value="Ajouter un produit" class="btn" name="add_product">
+      </form>
+
+   </section>
+
+   <section class="show-products">
+
+      <h1 class="heading">Produit ajouté</h1>
+
+      <div class="box-container">
+
+      <?php
+         $select_products = $conn->prepare("SELECT * FROM `products`");
+         $select_products->execute();
+         if($select_products->rowCount() > 0){
+            while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){ 
+      ?>
+      <div class="box">
+         <img src="../uploaded_img/<?= $fetch_products['image_01']; ?>" alt="">
+         <div class="name"><?= $fetch_products['name']; ?></div>
+         <div class="price"><span><?= $fetch_products['price']; ?></span> MAD</div>
+         <div class="details"><span><?= $fetch_products['details']; ?></span></div>
+         <div class="flex-btn">
+            <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">Modifier</a>
+            <a href="products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('Voulez-vous supprimer ce médicaments');">Supprimer</a>
          </div>
       </div>
-      
-      <input type="submit" value="add product" class="btn" name="add_product">
-   </form>
-
-</section>
-
-<section class="show-products">
-
-   <h1 class="heading">products added</h1>
-
-   <div class="box-container">
-
-   <?php
-      $select_products = $conn->prepare("SELECT * FROM `products`");
-      $select_products->execute();
-      if($select_products->rowCount() > 0){
-         while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){ 
-   ?>
-   <div class="box">
-      <img src="/ecommerce website/uploaded_img/<?= $fetch_products['image_01']; ?>" alt="">
-      <div class="name"><?= $fetch_products['name']; ?></div>
-      <div class="price">$<span><?= $fetch_products['price']; ?></span>/-</div>
-      <div class="details"><span><?= $fetch_products['details']; ?></span></div>
-      <div class="flex-btn">
-         <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
-         <a href="products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
-      </div>
-   </div>
-   <?php
+      <?php
+            }
+         }else{
+            echo '<p class="empty">Aucun produit ajouté pour le moment !</p>';
          }
-      }else{
-         echo '<p class="empty">no products added yet!</p>';
-      }
-   ?>
-   
-   </div>
-
-</section>
+      ?>
+      
+      </div>
+   </section>
 
 
 
@@ -178,7 +177,7 @@ if(isset($_GET['delete'])){
 
 
 
-<script src="../js/admin_script.js"></script>
-   
-</body>
-</html>
+   <script src="../js/admin_script.js"></script>
+      
+   </body>
+   </html>

@@ -18,12 +18,12 @@ if(isset($_SESSION['user_id'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>about</title>
+   <title>A propos</title>
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-   
+   <link rel="shortcut icon" href="images/Hanover.png" type="image/x-icon">
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
@@ -38,7 +38,7 @@ if(isset($_SESSION['user_id'])){
    <div class="row">
 
       <div class="image">
-         <img src="images/logo1.png" alt="">
+         <img src="images/Hanover.png" alt="">
       </div>
 
       <div class="content">
@@ -61,7 +61,7 @@ if(isset($_SESSION['user_id'])){
 
       <div class="swiper-slide slide">
          <img src="images/pic-1.png" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
+         <p>Je suis extrêmement satisfait du service de logistique pharmaceutique que j'ai reçu de votre entreprise. Les médicaments que j'ai commandés sont arrivés rapidement et en parfait état. Votre processus de commande en ligne était simple et pratique. Je vous recommande vivement à tous ceux qui ont besoin d'une livraison fiable et rapide de médicaments</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -69,12 +69,12 @@ if(isset($_SESSION['user_id'])){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Khalil</h3>
       </div>
 
       <div class="swiper-slide slide">
          <img src="images/pic-2.png" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
+         <p>En tant que professionnel de la santé, je suis constamment à la recherche d'un partenaire logistique de confiance pour approvisionner mes patients en médicaments. Votre entreprise de logistique pharmaceutique a dépassé toutes mes attentes. Votre équipe est compétente, votre entrepôt est bien organisé et vos délais de livraison sont remarquables. Je vous remercie pour votre excellent service.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -82,12 +82,12 @@ if(isset($_SESSION['user_id'])){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>ghizlane</h3>
       </div>
 
       <div class="swiper-slide slide">
          <img src="images/pic-3.png" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
+         <p>Je suis tellement reconnaissant d'avoir trouvé votre site de logistique pharmaceutique. La livraison de médicaments est un élément crucial de ma santé et je peux toujours compter sur vous pour livrer mes médicaments à temps. Votre site est convivial, votre service client est réactif et votre engagement envers la qualité est évident. Je suis un client fidèle et je vous recommande à tous.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -95,12 +95,12 @@ if(isset($_SESSION['user_id'])){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>hamid</h3>
       </div>
 
       <div class="swiper-slide slide">
          <img src="images/pic-4.png" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
+         <p>Je suis impressionné par la précision et l'efficacité de votre service de logistique pharmaceutique. Les médicaments que j'ai commandés ont été soigneusement emballés et sont arrivés dans les délais prévus. Votre site propose également une vaste gamme de produits pharmaceutiques, ce qui facilite grandement la recherche des médicaments dont j'ai besoin. Merci pour votre excellent travail !</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -108,35 +108,10 @@ if(isset($_SESSION['user_id'])){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Nada</h3>
       </div>
 
-      <div class="swiper-slide slide">
-         <img src="images/pic-5.png" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>john deo</h3>
-      </div>
-
-      <div class="swiper-slide slide">
-         <img src="images/pic-6.png" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempore distinctio hic, iusto adipisci a rerum nemo perspiciatis fugiat sapiente.</p>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-         </div>
-         <h3>john deo</h3>
-      </div>
-
+      
    </div>
 
    <div class="swiper-pagination"></div>

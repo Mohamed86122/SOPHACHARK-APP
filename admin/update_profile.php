@@ -28,18 +28,18 @@ if(isset($_POST['submit'])){
    $confirm_pass = filter_var($confirm_pass, FILTER_SANITIZE_STRING);
 
    if($old_pass == $empty_pass){
-      $message[] = 'please enter old password!';
+      $message[] = 'Merci de donner ancien mot de passe';
    }elseif($old_pass != $prev_pass){
-      $message[] = 'old password not matched!';
+      $message[] = 'Ancien mot de passe incorrect ';
    }elseif($new_pass != $confirm_pass){
-      $message[] = 'confirm password not matched!';
+      $message[] = 'Confirmation du mot de passe est incorrecte';
    }else{
       if($new_pass != $empty_pass){
          $update_admin_pass = $conn->prepare("UPDATE `admins` SET password = ? WHERE id = ?");
          $update_admin_pass->execute([$confirm_pass, $admin_id]);
-         $message[] = 'password updated successfully!';
+         $message[] = 'Mot de passe est modifié !';
       }else{
-         $message[] = 'please enter a new password!';
+         $message[] = 'Entrer un nouveau mot de passe ';
       }
    }
    
@@ -53,10 +53,10 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>update profile</title>
+   <title>Modifier profile</title>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="shortcut icon" href="../images/Hanover.png" type="image/x-icon">
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
 <section class="form-container">
 
    <form action="" method="post">
-      <h3>update profile</h3>
+      <h3>Modifier profile</h3>
       <input type="hidden" name="prev_pass" value="<?= $fetch_profile['password']; ?>">
       <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="old_pass" placeholder="enter old password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">

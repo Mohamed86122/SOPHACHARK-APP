@@ -20,11 +20,11 @@ include 'components/wishlist_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>search page</title>
+   <title>Rechercher</title>
    
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+   <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
+   <link rel="shortcut icon" href="images/Hanover.png" type="image/x-icon">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
@@ -35,7 +35,7 @@ include 'components/wishlist_cart.php';
 
 <section class="search-form">
    <form action="" method="post">
-      <input type="text" name="search_box" placeholder="search here..." maxlength="100" class="box" required>
+      <input type="text" name="search_box" placeholder="Recherchez ici ..." maxlength="100" class="box" required>
       <button type="submit" class="fas fa-search" name="search_btn"></button>
    </form>
 </section>
@@ -62,15 +62,15 @@ include 'components/wishlist_cart.php';
       <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
-         <div class="price"><span>$</span><?= $fetch_product['price']; ?><span>/-</span></div>
+         <div class="price"><span></span><?= $fetch_product['price']; ?><span> MAD</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
+      <input type="submit" value="Ajouter au panier" class="btn" name="add_to_cart">
    </form>
    <?php
          }
       }else{
-         echo '<p class="empty">no products found!</p>';
+         echo '<p class="empty">aucun médicament trouvé !</p>';
       }
    }
    ?>
