@@ -13,4 +13,6 @@
 <img width="960" alt="image" src="https://github.com/Mohamed86122/SOPHACHARK-APP/assets/76246460/0f224652-3ab2-4117-9323-ec1f00eb1a16">
 <img width="960" alt="image" src="https://github.com/Mohamed86122/SOPHACHARK-APP/assets/76246460/f56a13e1-697e-425c-aa1d-ddf15ca94a6e">
 <img width="960" alt="image" src="https://github.com/Mohamed86122/SOPHACHARK-APP/assets/76246460/db7cf20a-e10a-4199-96b8-08d0ad2147f4">
+<img width="959" alt="image" src="https://github.com/Mohamed86122/SOPHACHARK-APP/assets/76246460/2462b42f-978a-4009-abca-41951d392dee">
+<img width="960" alt="image" src="https://github.com/Mohamed86122/SOPHACHARK-APP/assets/76246460/d71656c5-2c57-46a1-a323-0967c3182a8c">
 
